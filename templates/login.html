@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        #login_div {
+            border:1px solid black;
+            text-align: center;
+            margin-top: 150px;
+            padding: 20px;
+            width: 600px;
+            margin-left: 350px;
+            background-color: turquoise;
+            border-radius: 5px;
+        }
+        #login_div>button{
+            font-size:20px ;
+            border-radius: 5px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        div>input{
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login_div">
+        <h1>Login Page</h1>
+         <input type="text" name="Username" id="Username" placeholder="Username" required="required">
+         <input type="password" name="password" id="Password" placeholder="Password" required="required">
+        <button id="login-btn">Login</button>
+        <br><br>
+        <button id="register-btn"><a href="{{url_for('registerPage')}}">Don't have an account ? Sign Up Here.</a></button><br><br>
+        <button><a href="{{url_for('home')}}">Home</a></button>
+    </div>
+</body>
+</html>

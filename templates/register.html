@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        #register_div {
+            border:1px solid black;
+            text-align: center;
+            margin-top: 150px;
+            padding: 20px;
+            width: 600px;
+            margin-left: 350px;
+            background-color: turquoise;
+            border-radius: 5px;
+        }
+        #register_div>button{
+            font-size:20px ;
+            border-radius: 5px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        div>input{
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="register_div">
+        <h1>Register Page</h1>
+        <form action="{{url_for('register')}}" method="post">
+         <input type="text" name="username" id="username" placeholder="username" required="required">
+         <input type="password" name="password" id="password" placeholder="password" required="required">
+        <button id="login-btn" type="submit">Register</button>
+        <br><br>
+        <button id="register-btn"><a href="{{url_for('loginPage')}}">Already have an account ? Login Here.</a></button><br><br>
+        <div class="msg">{{ msg }}</div>
+        <button><a href="{{url_for('home')}}">Home</a></button>
+    </form>
+    </div>
+</body>
+</html>

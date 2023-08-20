@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <style>
+        #home_div {
+            border:1px solid black;
+            text-align: center;
+            margin-top: 150px;
+            padding: 20px;
+            width: 600px;
+            margin-left: 350px;
+            background-color: turquoise;
+            border-radius: 5px;
+        }
+        #home_div>button{
+            font-size:25px ;
+            border-radius: 5px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="home_div">
+        <h1>Please login/signup to check the loan eligibility.</h1>
+        <button id="login"><a href="{{url_for('loginPage')}}">Login Now</a></button>
+        
+        <br><br>
+        <button id="register"><a href="{{url_for('registerPage')}}">Register Now</a></button>
+    </div>
+</body>
+
+</html>
